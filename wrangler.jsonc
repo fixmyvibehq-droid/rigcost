@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static site: serves the pre-built ./site folder.
+  "name": "rigcost",
+  "compatibility_date": "2026-10-18",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  }
+}

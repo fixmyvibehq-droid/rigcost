@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rigcost.co.uk/sitemap.xml

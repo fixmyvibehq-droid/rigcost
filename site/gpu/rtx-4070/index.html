@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RTX 4070 running cost UK: about 8.7p an hour | RigCost</title>
+<meta name="description" content="How much electricity does the NVIDIA RTX 4070 use, and what does it cost to run in the UK? About 8.7p an hour for a typical gaming PC at 26.32p/kWh.">
+<link rel="canonical" href="https://rigcost.co.uk/gpu/rtx-4070/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RTX 4070 running cost UK: about 8.7p an hour | RigCost">
+<meta property="og:description" content="How much electricity does the NVIDIA RTX 4070 use, and what does it cost to run in the UK? About 8.7p an hour for a typical gaming PC at 26.32p/kWh.">
+<meta property="og:url" content="https://rigcost.co.uk/gpu/rtx-4070/">
+<meta property="og:site_name" content="RigCost">
+<meta property="og:image" content="https://rigcost.co.uk/og.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rigcost.co.uk/og.png">
+<meta name="theme-color" content="#0d6b5b">
+<meta name="google-site-verification" content="3PvC1MIsjz__GuhE1ktbg3zEu9GB-7bujPmxtdtwkj4">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RigCost", "item": "https://rigcost.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Graphics cards", "item": "https://rigcost.co.uk/"}, {"@type": "ListItem", "position": 3, "name": "RTX 4070", "item": "https://rigcost.co.uk/gpu/rtx-4070/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does an RTX 4070 cost to run in the UK?", "acceptedAnswer": {"@type": "Answer", "text": "About 8.7p an hour for a whole gaming PC with the NVIDIA RTX 4070 in a typical game, at 26.32p per kWh. That is around £95 a year at 3 hours a day."}}]}</script>
+
+<script>window.RIGCOST_LINKS = true; window.RIGCOST_GPU = "NVIDIA RTX 4070";</script>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=Atkinson+Hyperlegible:wght@400;700&family=Share+Tech+Mono&display=swap">
+<style>
+/* Layout: a smart-meter readout pinned beside the rig form; reference tables and method below. */
+:root {
+  --bg: #edf0ee;
+  --surface: #ffffff;
+  --sunk: #e2e7e4;
+  --line: #cdd6d2;
+  --ink: #14211d;
+  --muted: #56655f;
+  --accent: #0d6b5b;
+  --accent-ink: #ffffff;
+  --meter: #1c1913;
+  --meter-line: #3a3326;
+  --amber: #ffb547;
+  --amber-dim: #8a6a35;
+  --gpu: #0d6b5b; --cpu: #c7832a; --rest: #7b8a85; --mon: #4b6fa8;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --readout: "Share Tech Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1412; --surface: #151d1b; --sunk: #1b2523; --line: #2a3734; --ink: #e5eeeb; --muted: #95a8a2;
+    --accent: #4cc2aa; --accent-ink: #06201b; --meter: #120f0a; --meter-line: #3a3326;
+    --gpu: #4cc2aa; --cpu: #e3a24e; --rest: #8d9c97; --mon: #7d9fd6; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1412; --surface: #151d1b; --sunk: #1b2523; --line: #2a3734; --ink: #e5eeeb; --muted: #95a8a2;
+  --accent: #4cc2aa; --accent-ink: #06201b; --meter: #120f0a; --meter-line: #3a3326;
+  --gpu: #4cc2aa; --cpu: #e3a24e; --rest: #8d9c97; --mon: #7d9fd6; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 17px/1.55 var(--body); }
+.page { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 56px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-stretch: 112%; text-wrap: balance; line-height: 1.08; margin: 0; }
+
+/* Header */
+.mast { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 22px 18px; border-bottom: 2px solid var(--ink); }
+.brand { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+.rate-chip { font: 14px var(--readout); color: var(--muted); }
+
+.intro { padding-block: 30px 22px; max-width: 760px; }
+.intro h1 { font-size: clamp(30px, 5vw, 50px); font-weight: 800; letter-spacing: -0.015em; }
+.intro p { color: var(--muted); margin: 12px 0 0; font-size: 18px; max-width: 62ch; }
+
+/* Tool */
+.tool { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
+@media (min-width: 900px) { .tool { grid-template-columns: minmax(0, 1fr) 420px; } .meter { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); } }
+
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: grid; gap: 20px; min-width: 0; }
+.field { display: grid; gap: 6px; min-width: 0; align-content: start; }
+.field > label, .field > .lab { font-weight: 700; font-size: 15px; }
+.hint { font-size: 14px; color: var(--muted); }
+select, input[type="number"] {
+  width: 100%; min-height: 46px; padding: 0 12px; font: 16px var(--body); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+}
+.row2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; background: var(--sunk); padding: 4px; border-radius: 10px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { display: grid; gap: 1px; text-align: center; padding: 9px 6px; border-radius: 7px; cursor: pointer; font-weight: 700; font-size: 15px; }
+.seg label small { font-weight: 400; font-size: 12px; color: var(--muted); }
+.seg input:checked + label { background: var(--surface); box-shadow: inset 0 0 0 2px var(--accent); }
+.seg input:focus-visible + label { outline: 3px solid var(--accent); }
+.range-row { display: flex; align-items: center; gap: 14px; }
+.range-row input[type="range"] { flex: 1; min-width: 0; accent-color: var(--accent); height: 30px; }
+.range-row output { font: 20px var(--readout); min-width: 4.5ch; text-align: right; }
+.custom[hidden] { display: none !important; }
+
+/* Meter readout (always the in-home-display look) */
+.meter { background: var(--meter); color: var(--amber); border-radius: 14px; padding: 20px 20px 18px; border: 1px solid var(--meter-line); min-width: 0; }
+.meter-top { display: flex; justify-content: space-between; font: 13px var(--readout); color: var(--amber-dim); letter-spacing: .08em; text-transform: uppercase; }
+.big { font: clamp(56px, 9vw, 76px)/1 var(--readout); margin: 14px 0 2px; font-variant-numeric: tabular-nums; text-shadow: 0 0 18px rgba(255,181,71,.25); }
+.big-sub { font: 15px var(--readout); color: var(--amber-dim); }
+.readouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--meter-line); border: 1px solid var(--meter-line); border-radius: 8px; overflow: hidden; margin-top: 18px; }
+.readouts div { background: var(--meter); padding: 10px 12px; }
+.readouts dt { font: 11px var(--readout); color: var(--amber-dim); letter-spacing: .1em; text-transform: uppercase; }
+.readouts dd { margin: 4px 0 0; font: 22px var(--readout); font-variant-numeric: tabular-nums; }
+.watts { margin-top: 18px; }
+.watts-head { display: flex; justify-content: space-between; font: 13px var(--readout); color: var(--amber-dim); letter-spacing: .06em; text-transform: uppercase; }
+.watts-head b { color: var(--amber); font-weight: 400; }
+.bar { display: flex; height: 14px; border-radius: 3px; overflow: hidden; margin-top: 8px; background: var(--meter-line); }
+.bar i { display: block; height: 100%; transition: width .3s; }
+.legend { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; font: 13px var(--readout); color: #e9dcc4; }
+.legend li { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.legend li span:last-child { margin-left: auto; color: var(--amber); font-variant-numeric: tabular-nums; }
+.legend i { width: 10px; height: 10px; flex: none; border-radius: 2px; }
+.fact { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--meter-line); font: 15px/1.5 var(--body); color: #e9dcc4; }
+.fact b { color: var(--amber); font-family: var(--readout); font-weight: 400; font-size: 17px; }
+.measure { display: block; margin-top: 14px; padding: 12px 14px; border-radius: 8px; background: rgba(255,181,71,.08); border: 1px solid var(--meter-line); color: #e9dcc4; font-size: 14px; text-decoration: none; }
+.measure strong { color: var(--amber); }
+.aff { font-size: 12px; color: var(--amber-dim); margin-top: 6px; }
+
+/* Sections below */
+section { padding-top: 52px; }
+section > h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 800; }
+section > p.lede { color: var(--muted); margin: 8px 0 18px; max-width: 64ch; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font: 12px var(--readout); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); background: var(--sunk); position: sticky; top: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--readout); }
+tbody tr:last-child td { border-bottom: 0; }
+tr.mine td { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); font-weight: 700; }
+.tbar { display: inline-block; height: 8px; border-radius: 2px; background: var(--gpu); vertical-align: middle; margin-left: 8px; opacity: .8; }
+.method { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.method div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; min-width: 0; }
+.method h3 { font-size: 18px; margin-bottom: 6px; }
+.method p { margin: 0; color: var(--muted); font-size: 15px; }
+.formula { font: 15px/1.7 var(--readout); background: var(--sunk); border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 0 0 14px; }
+details { border-bottom: 1px solid var(--line); padding-block: 4px; }
+summary { cursor: pointer; font-weight: 700; padding-block: 12px; }
+details p { margin: 0 0 14px; color: var(--muted); max-width: 70ch; }
+.sources { font-size: 14px; color: var(--muted); padding-left: 18px; }
+.sources li { margin: 4px 0; }
+footer { margin-top: 48px; padding-top: 18px; border-top: 2px solid var(--ink); font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+@media (max-width: 480px) { .readouts dd { font-size: 18px; } .legend { grid-template-columns: 1fr; } }
+</style>
+<style>
+.browse-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 14px; }
+.browse h3 { font-size: 16px; margin: 0 0 6px; }
+.browse ul { list-style: none; padding: 0; margin: 0 0 16px; columns: 2; column-gap: 16px; font-size: 15px; }
+.browse li { margin: 3px 0; break-inside: avoid; }
+.crumb { font: 13px var(--readout); color: var(--muted); padding-top: 18px; }
+.crumb a { color: var(--muted); }
+.prose { max-width: 70ch; }
+.prose h2 { font-size: clamp(22px, 3vw, 28px); margin: 34px 0 8px; }
+.prose p, .prose li { color: var(--ink); }
+.prose li { margin: 6px 0; }
+.stat { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.stat div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.stat dt { font: 12px var(--readout); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stat dd { margin: 4px 0 0; font: 26px var(--readout); font-variant-numeric: tabular-nums; }
+.btn-link { display: inline-block; margin-top: 10px; padding: 12px 18px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+</style>
+
+<div class="page">
+  <header class="mast">
+    <a class="brand" href="/">Rig<span>Cost</span></a>
+    <span class="rate-chip" id="rateChip">UK price cap · 26.32p/kWh</span>
+  </header>
+
+  <main id="top">
+    <div class="intro">
+      <p class="crumb"><a href="/">RigCost</a> / Graphics cards / RTX 4070</p><h1>How much does an RTX 4070 cost to run?</h1>
+      <p>A gaming PC with the NVIDIA RTX 4070 (rated 200 W) draws about 330 W at the wall in a typical game, with a Ryzen 5 7600 and a 27-inch monitor. At the UK price cap of 26.32p per kWh, that is about 8.7p an hour, or around £95 a year if you play 3 hours a day. Change any setting below to match your own PC.</p>
+    </div>
+
+    <div class="tool">
+      <form class="form" id="rig" novalidate>
+        <div class="field">
+          <label for="gpu">Graphics card</label>
+          <select id="gpu"></select>
+          <div class="custom field" id="gpuCustomWrap" hidden>
+            <label for="gpuCustom">Your card's power rating (watts)</label>
+            <input id="gpuCustom" type="number" min="20" max="1000" step="5" value="200" inputmode="numeric">
+            <span class="hint">Search your card's name plus "TGP" or "board power".</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cpu">Processor</label>
+          <select id="cpu"></select>
+        </div>
+        <div class="field">
+          <span class="lab" id="loadLab">What do you mostly play?</span>
+          <div class="seg" role="radiogroup" aria-labelledby="loadLab">
+            <input type="radio" name="load" id="loadLight" value="light"><label for="loadLight">Light<small>Indie, esports</small></label>
+            <input type="radio" name="load" id="loadTypical" value="typical" checked><label for="loadTypical">Typical<small>Most new games</small></label>
+            <input type="radio" name="load" id="loadMax" value="max"><label for="loadMax">Maxed out<small>4K, ray tracing</small></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="hours">Hours per day</label>
+          <div class="range-row"><input id="hours" type="range" min="0.5" max="12" step="0.5" value="3"><output id="hoursOut" for="hours">3h</output></div>
+        </div>
+        <div class="field">
+          <label for="days">Days per week</label>
+          <div class="range-row"><input id="days" type="range" min="1" max="7" step="1" value="7"><output id="daysOut" for="days">7</output></div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="monitor">Monitor</label>
+            <select id="monitor">
+              <option value="0">Not included</option>
+              <option value="25">24-inch (about 25 W)</option>
+              <option value="35" selected>27-inch (about 35 W)</option>
+              <option value="50">32-inch or ultrawide (about 50 W)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rate">Your price per kWh (pence)</label>
+            <input id="rate" type="number" min="1" max="100" step="0.01" value="26.32" inputmode="decimal">
+            <span class="hint">Ofgem cap, Oct–Dec 2026. Your bill shows your own rate.</span>
+          </div>
+        </div>
+      </form>
+
+      <aside class="meter" aria-label="Running cost">
+        <div class="meter-top"><span>Cost per month</span><span id="kwhMonth">— kWh</span></div>
+        <div class="big" id="perMonth" aria-live="polite">£0.00</div>
+        <div class="big-sub" id="perMonthSub">at 3 hours a day</div>
+        <dl class="readouts">
+          <div><dt>Per hour</dt><dd id="perHour">0.0p</dd></div>
+          <div><dt>Per week</dt><dd id="perWeek">£0.00</dd></div>
+          <div><dt>Per year</dt><dd id="perYear">£0</dd></div>
+        </dl>
+        <div class="watts">
+          <div class="watts-head"><span>Power at the wall</span><b id="wallW">0 W</b></div>
+          <div class="bar" aria-hidden="true"><i id="bGpu" style="background:var(--gpu)"></i><i id="bCpu" style="background:var(--cpu)"></i><i id="bRest" style="background:var(--rest)"></i><i id="bMon" style="background:var(--mon)"></i></div>
+          <ul class="legend">
+            <li><i style="background:var(--gpu)"></i><span>Graphics card</span><span id="lGpu">0 W</span></li>
+            <li><i style="background:var(--cpu)"></i><span>Processor</span><span id="lCpu">0 W</span></li>
+            <li><i style="background:var(--rest)"></i><span>Rest of PC + PSU</span><span id="lRest">0 W</span></li>
+            <li><i style="background:var(--mon)"></i><span>Monitor</span><span id="lMon">0 W</span></li>
+          </ul>
+        </div>
+        <p class="fact" id="fact">Finishing a 60-hour game costs <b>£0.00</b> in electricity.</p>
+        <a class="measure" id="monitorLink" href="https://www.amazon.co.uk/s?k=plug+in+energy+monitor" target="_blank" rel="noopener sponsored">
+          <strong>Want your exact number?</strong> A plug-in energy monitor shows what your PC really draws. →
+        </a>
+        <div class="aff" id="affNote" hidden>Affiliate link: we may earn a commission at no cost to you.</div>
+      </aside>
+    </div>
+
+    <section aria-labelledby="cards">
+      <h2 id="cards">Graphics cards by running cost</h2>
+      <p class="lede">Each row is the whole PC's cost with that card, using your processor, monitor, hours and price above. Your card is highlighted.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Graphics card running costs">
+        <table>
+          <thead><tr><th>Graphics card</th><th class="num">Rated power</th><th class="num">Per hour</th><th class="num">Per year</th><th>Prices</th></tr></thead>
+          <tbody id="gpuTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">How we work it out</h2>
+      <p class="lede">Games rarely run every part at full power, so we scale each part's rated power by how demanding your games are, then add what the power supply loses as heat.</p>
+      <pre class="formula" id="formula">wall watts = (GPU × load + CPU × load + 50 W) ÷ 0.90 + monitor
+cost = wall watts ÷ 1000 × hours × price per kWh</pre>
+      <div class="method">
+        <div><h3>Load levels</h3><p>Light: graphics card at 60%, processor at 50%. Typical: 85% and 70%. Maxed out: 100% of both.</p></div>
+        <div><h3>The rest of the PC</h3><p>Motherboard, memory, drives and fans are counted as 50 W. The power supply is assumed 90% efficient, which is typical for an 80 Plus Gold unit.</p></div>
+        <div><h3>What we leave out</h3><p>The standing charge you pay anyway, speakers and other devices, and time the PC sits idle or on the desktop.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Questions</h2>
+      <details><summary>Is this accurate for my PC?</summary><p>It's a close estimate. Real draw changes with each game, your settings and your exact model. Factory-overclocked cards can draw 10–20% more than the official rating. A plug-in energy monitor gives you the exact figure.</p></details>
+      <details><summary>Where does the electricity price come from?</summary><p>The default is Ofgem's price cap unit rate for 1 October to 31 December 2026: 26.32p per kWh, for a standard variable tariff paid by Direct Debit. VAT on household electricity is 0% from 1 October 2026. Fixed tariffs and Economy 7 rates differ, so enter your own rate from your bill if you know it.</p></details>
+      <details><summary>Does a more powerful graphics card always cost more to run?</summary><p>Usually, yes, while gaming. Capping your frame rate, turning on V-Sync or using upscaling can cut a card's power use a lot, because it no longer has to run flat out.</p></details>
+      <details><summary>Does leaving my PC on overnight cost much?</summary><p>An idle desktop PC typically draws far less than when gaming, but it still adds up over a year. Use sleep mode, and turn off RGB lighting and extra screens when you're not playing.</p></details>
+      <details><summary>My card isn't in the list.</summary><p>Choose "My card isn't listed" at the bottom of the graphics card menu and type its power rating in watts.</p></details>
+    </section>
+
+    <section aria-labelledby="src">
+      <h2 id="src">Sources</h2>
+      <ul class="sources">
+        <li><a href="https://ofgem.gov.uk/news/changes-energy-price-cap-between-1-october-and-31-december-2026" target="_blank" rel="noopener">Ofgem: energy price cap, 1 October to 31 December 2026</a></li>
+        <li><a href="https://www.edfenergy.com/energywise/vat-cut-on-electricity-bills-2026" target="_blank" rel="noopener">EDF: VAT on electricity cut to 0% from 1 October 2026</a></li>
+        <li>Graphics card and processor power ratings: the manufacturers' published specifications (NVIDIA total graphics power, AMD total board power, rated processor TDP).</li>
+      </ul>
+    </section>
+  
+    <section aria-labelledby="glance">
+      <h2 id="glance">RTX 4070 running costs at a glance</h2>
+      <p class="lede">Whole PC, typical gaming load, with a Ryzen 5 7600, 27-inch monitor and 26.32p per kWh. The graphics card is about 57% of the total.</p>
+      <div class="table-wrap" role="region" aria-label="RTX 4070 running cost by hours played" tabindex="0"><table><thead><tr><th>Playing</th><th class="num">Per week</th><th class="num">Per month</th><th class="num">Per year</th></tr></thead><tbody><tr><td>1 hour a day</td><td class="num">£0.61</td><td class="num">£2.64</td><td class="num">£32</td></tr><tr><td>2 hours a day</td><td class="num">£1.22</td><td class="num">£5.29</td><td class="num">£63</td></tr><tr><td>3 hours a day</td><td class="num">£1.82</td><td class="num">£7.93</td><td class="num">£95</td></tr><tr><td>4 hours a day</td><td class="num">£2.43</td><td class="num">£10.58</td><td class="num">£127</td></tr><tr><td>6 hours a day</td><td class="num">£3.65</td><td class="num">£15.86</td><td class="num">£190</td></tr></tbody></table></div>
+    </section>
+    <section aria-labelledby="near">
+      <h2 id="near">Cards with similar power use</h2>
+      <p class="lede">Same PC and 3 hours a day. The figure in brackets is the difference per year compared with the RTX 4070.</p>
+      <ul class="sources"><li><a href="/gpu/rx-9060-xt-16gb/">RX 9060 XT 16GB</a>: about 8.2p an hour (−£5 a year)</li><li><a href="/gpu/arc-b580/">Arc B580</a>: about 8.4p an hour (−£3 a year)</li><li><a href="/gpu/rtx-3060-ti/">RTX 3060 Ti</a>: about 8.7p an hour (+£0 a year)</li><li><a href="/gpu/rtx-4070-super/">RTX 4070 Super</a>: about 9.2p an hour (+£5 a year)</li></ul>
+    </section><section aria-labelledby="browse" class="browse">
+      <h2 id="browse">Running costs by part</h2>
+      <div class="browse-grid">
+        <div><h3>Graphics cards</h3><ul><li><a href="/gpu/rtx-4060/">RTX 4060</a></li><li><a href="/gpu/gtx-1660-super/">GTX 1660 Super</a></li><li><a href="/gpu/rx-6600/">RX 6600</a></li><li><a href="/gpu/rtx-5060/">RTX 5060</a></li><li><a href="/gpu/rtx-4060-ti/">RTX 4060 Ti</a></li><li><a href="/gpu/rx-7600/">RX 7600</a></li><li><a href="/gpu/rtx-3060/">RTX 3060</a></li><li><a href="/gpu/rtx-5060-ti/">RTX 5060 Ti</a></li><li><a href="/gpu/rx-9060-xt-16gb/">RX 9060 XT 16GB</a></li><li><a href="/gpu/arc-b580/">Arc B580</a></li><li><a href="/gpu/rtx-4070/">RTX 4070</a></li><li><a href="/gpu/rtx-3060-ti/">RTX 3060 Ti</a></li><li><a href="/gpu/rtx-4070-super/">RTX 4070 Super</a></li><li><a href="/gpu/rtx-3070/">RTX 3070</a></li><li><a href="/gpu/rx-9070/">RX 9070</a></li><li><a href="/gpu/rx-6700-xt/">RX 6700 XT</a></li><li><a href="/gpu/rx-7700-xt/">RX 7700 XT</a></li><li><a href="/gpu/rtx-5070/">RTX 5070</a></li><li><a href="/gpu/rx-7800-xt/">RX 7800 XT</a></li><li><a href="/gpu/rtx-4070-ti/">RTX 4070 Ti</a></li><li><a href="/gpu/rtx-5070-ti/">RTX 5070 Ti</a></li><li><a href="/gpu/rx-9070-xt/">RX 9070 XT</a></li><li><a href="/gpu/rx-7900-xt/">RX 7900 XT</a></li><li><a href="/gpu/rtx-4080/">RTX 4080</a></li><li><a href="/gpu/rtx-3080/">RTX 3080</a></li><li><a href="/gpu/rtx-3090/">RTX 3090</a></li><li><a href="/gpu/rx-7900-xtx/">RX 7900 XTX</a></li><li><a href="/gpu/rtx-5080/">RTX 5080</a></li><li><a href="/gpu/rtx-4090/">RTX 4090</a></li><li><a href="/gpu/rtx-5090/">RTX 5090</a></li></ul></div>
+        <div><h3>Processors</h3><ul><li><a href="/cpu/ryzen-5-5600/">Ryzen 5 5600</a></li><li><a href="/cpu/ryzen-7-5800x3d/">Ryzen 7 5800X3D</a></li><li><a href="/cpu/ryzen-5-7600/">Ryzen 5 7600</a></li><li><a href="/cpu/ryzen-7-7800x3d/">Ryzen 7 7800X3D</a></li><li><a href="/cpu/ryzen-5-9600x/">Ryzen 5 9600X</a></li><li><a href="/cpu/ryzen-7-9800x3d/">Ryzen 7 9800X3D</a></li><li><a href="/cpu/ryzen-9-9950x3d/">Ryzen 9 9950X3D</a></li><li><a href="/cpu/core-i5-12400f/">Core i5-12400F</a></li><li><a href="/cpu/core-i5-13400f/">Core i5-13400F</a></li><li><a href="/cpu/core-i5-14600k/">Core i5-14600K</a></li><li><a href="/cpu/core-i7-14700k/">Core i7-14700K</a></li><li><a href="/cpu/core-i9-14900k/">Core i9-14900K</a></li><li><a href="/cpu/core-ultra-5-245k/">Core Ultra 5 245K</a></li><li><a href="/cpu/core-ultra-7-265k/">Core Ultra 7 265K</a></li><li><a href="/cpu/core-ultra-9-285k/">Core Ultra 9 285K</a></li></ul></div>
+        <div><h3>Consoles</h3><ul><li><a href="/console/ps5/">PS5</a></li><li><a href="/console/ps5-pro/">PS5 Pro</a></li><li><a href="/console/xbox-series-x/">Xbox Series X</a></li><li><a href="/console/xbox-series-s/">Xbox Series S</a></li><li><a href="/console/nintendo-switch-2/">Nintendo Switch 2</a></li><li><a href="/consoles/">PC vs console compared</a></li></ul>
+        <h3>Guides</h3><ul><li><a href="/guides/cut-gaming-pc-electricity-cost/">Cut your gaming PC's electricity cost</a></li></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footNote">Prices last updated for October–December 2026. Estimates only.</span>
+    <p style="margin: 8px 0 0;">As an Amazon Associate, RigCost earns from qualifying purchases. Price links on this site are affiliate links; they never change our numbers or what we show.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  // Add your Amazon UK Associates tag here once approved, e.g. 'rigcost-21'. Leave '' for plain links.
+  var AMAZON_TAG = 'rigcost-21';
+
+  // Rated power in watts, from manufacturer specifications.
+  var GPUS = [
+    ['NVIDIA RTX 5090', 575], ['NVIDIA RTX 5080', 360], ['NVIDIA RTX 5070 Ti', 300], ['NVIDIA RTX 5070', 250],
+    ['NVIDIA RTX 5060 Ti', 180], ['NVIDIA RTX 5060', 145],
+    ['NVIDIA RTX 4090', 450], ['NVIDIA RTX 4080 / 4080 Super', 320], ['NVIDIA RTX 4070 Ti / Ti Super', 285],
+    ['NVIDIA RTX 4070 Super', 220], ['NVIDIA RTX 4070', 200], ['NVIDIA RTX 4060 Ti', 160], ['NVIDIA RTX 4060', 115],
+    ['NVIDIA RTX 3090', 350], ['NVIDIA RTX 3080', 320], ['NVIDIA RTX 3070', 220], ['NVIDIA RTX 3060 Ti', 200], ['NVIDIA RTX 3060', 170],
+    ['NVIDIA GTX 1660 Super', 125],
+    ['AMD RX 9070 XT', 304], ['AMD RX 9070', 220], ['AMD RX 9060 XT 16GB', 182],
+    ['AMD RX 7900 XTX', 355], ['AMD RX 7900 XT', 315], ['AMD RX 7800 XT', 263], ['AMD RX 7700 XT', 245], ['AMD RX 7600', 165],
+    ['AMD RX 6700 XT', 230], ['AMD RX 6600', 132],
+    ['Intel Arc B580', 190]
+  ];
+  var CPUS = [
+    ['AMD Ryzen 5 5600', 65], ['AMD Ryzen 7 5800X3D', 105], ['AMD Ryzen 5 7600', 65], ['AMD Ryzen 7 7800X3D', 120],
+    ['AMD Ryzen 5 9600X', 65], ['AMD Ryzen 7 9800X3D', 120], ['AMD Ryzen 9 9950X3D', 170],
+    ['Intel Core i5-12400F', 65], ['Intel Core i5-13400F', 65], ['Intel Core i5-14600K', 125],
+    ['Intel Core i7-14700K', 125], ['Intel Core i9-14900K', 125],
+    ['Intel Core Ultra 5 245K', 125], ['Intel Core Ultra 7 265K', 125], ['Intel Core Ultra 9 285K', 125]
+  ];
+  var LOADS = { light: [0.6, 0.5], typical: [0.85, 0.7], max: [1, 1] };
+  var REST = 50, PSU = 0.9, WEEKS = 52.18;
+
+  var $ = function (id) { return document.getElementById(id); };
+  function fill(sel, list, def) {
+    list.forEach(function (it, i) { var o = document.createElement('option'); o.value = i; o.textContent = it[0] + ' (' + it[1] + ' W)'; if (it[0] === def) o.selected = true; sel.appendChild(o); });
+  }
+  fill($('gpu'), GPUS, window.RIGCOST_GPU || 'NVIDIA RTX 4060');
+  function slug(n) { return n.replace(/ \/.*$/, '').replace(/^(NVIDIA|AMD|Intel) /, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  var other = document.createElement('option'); other.value = 'custom'; other.textContent = "My card isn't listed"; $('gpu').appendChild(other);
+  fill($('cpu'), CPUS, window.RIGCOST_CPU || 'AMD Ryzen 5 7600');
+
+  function amazon(q) {
+    var u = 'https://www.amazon.co.uk/s?k=' + encodeURIComponent(q);
+    return AMAZON_TAG ? u + '&tag=' + encodeURIComponent(AMAZON_TAG) : u;
+  }
+  if (AMAZON_TAG) { $('monitorLink').href = amazon('plug in energy monitor'); $('affNote').hidden = false; }
+
+  function money(p) { return p < 100 ? p.toFixed(1) + 'p' : '£' + (p / 100).toFixed(2); }
+  function pounds(p, dp) { return '£' + (p / 100).toFixed(dp); }
+
+  function inputs() {
+    var g = $('gpu').value, load = LOADS[document.querySelector('input[name="load"]:checked').value];
+    var gw = g === 'custom' ? Math.max(0, Number($('gpuCustom').value) || 0) : GPUS[Number(g)][1];
+    return {
+      gpuIdx: g, gpuW: gw, cpuW: CPUS[Number($('cpu').value)][1], load: load,
+      hours: Number($('hours').value), days: Number($('days').value),
+      monW: Number($('monitor').value), rate: Math.max(0, Number($('rate').value) || 0)
+    };
+  }
+  function wall(gpuW, s) {
+    var parts = { gpu: gpuW * s.load[0] / PSU, cpu: s.cpuW * s.load[1] / PSU, rest: REST / PSU, mon: s.monW };
+    parts.total = parts.gpu + parts.cpu + parts.rest + parts.mon;
+    return parts;
+  }
+
+  function render() {
+    var s = inputs(), w = wall(s.gpuW, s);
+    var perHour = w.total / 1000 * s.rate;             // pence
+    var hoursYear = s.hours * s.days * WEEKS;
+    var perYear = perHour * hoursYear, perMonth = perYear / 12, perWeek = perHour * s.hours * s.days;
+
+    $('hoursOut').textContent = s.hours + 'h';
+    $('daysOut').textContent = s.days;
+    $('gpuCustomWrap').hidden = s.gpuIdx !== 'custom';
+    $('perMonth').textContent = pounds(perMonth, 2);
+    $('perMonthSub').textContent = 'at ' + s.hours + (s.hours === 1 ? ' hour' : ' hours') + ' a day, ' + s.days + (s.days === 1 ? ' day' : ' days') + ' a week';
+    $('kwhMonth').textContent = (w.total / 1000 * hoursYear / 12).toFixed(1) + ' kWh';
+    $('perHour').textContent = money(perHour);
+    $('perWeek').textContent = pounds(perWeek, 2);
+    $('perYear').textContent = pounds(perYear, 0);
+    $('wallW').textContent = Math.round(w.total) + ' W';
+    ['gpu', 'cpu', 'rest', 'mon'].forEach(function (k) {
+      var id = k.charAt(0).toUpperCase() + k.slice(1);
+      $('b' + id).style.width = (w.total ? w[k] / w.total * 100 : 0) + '%';
+      $('l' + id).textContent = Math.round(w[k]) + ' W';
+    });
+    $('fact').innerHTML = 'Finishing a 60-hour game costs <b>' + pounds(perHour * 60, 2) + '</b> in electricity.';
+    $('rateChip').textContent = 'Price · ' + s.rate.toFixed(2) + 'p/kWh';
+
+    var rows = GPUS.map(function (g, i) { return { i: i, name: g[0], w: g[1], hour: wall(g[1], s).total / 1000 * s.rate }; })
+      .sort(function (a, b) { return a.w - b.w; });
+    var maxW = rows[rows.length - 1].w;
+    var html = '';
+    rows.forEach(function (r) {
+      var mine = String(r.i) === s.gpuIdx;
+      var label = window.RIGCOST_LINKS ? '<a href="/gpu/' + slug(r.name) + '/">' + r.name + '</a>' : r.name;
+      html += '<tr' + (mine ? ' class="mine"' : '') + '><td>' + label + (mine ? ' (yours)' : '') + '</td>' +
+        '<td class="num">' + r.w + ' W<span class="tbar" style="width:' + Math.round(r.w / maxW * 60) + 'px"></span></td>' +
+        '<td class="num">' + money(r.hour) + '</td><td class="num">' + pounds(r.hour * hoursYear, 0) + '</td>' +
+        '<td><a href="' + amazon(r.name.replace(/ \/.*$/, '') + ' graphics card') + '" target="_blank" rel="noopener' + (AMAZON_TAG ? ' sponsored' : '') + '">Compare prices</a></td></tr>';
+    });
+    $('gpuTable').innerHTML = html;
+  }
+
+  $('rig').addEventListener('input', render);
+  $('rig').addEventListener('change', render);
+  $('rig').addEventListener('submit', function (e) { e.preventDefault(); });
+  render();
+})();
+</script>
+
+</body>
+</html>

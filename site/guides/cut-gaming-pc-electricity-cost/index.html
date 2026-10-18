@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to cut your gaming PC&#x27;s electricity cost (UK) | RigCost</title>
+<meta name="description" content="Seven free ways to lower what your gaming PC costs to run in the UK, from frame caps and upscaling to sleep settings and efficient upgrades.">
+<link rel="canonical" href="https://rigcost.co.uk/guides/cut-gaming-pc-electricity-cost/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to cut your gaming PC&#x27;s electricity cost (UK) | RigCost">
+<meta property="og:description" content="Seven free ways to lower what your gaming PC costs to run in the UK, from frame caps and upscaling to sleep settings and efficient upgrades.">
+<meta property="og:url" content="https://rigcost.co.uk/guides/cut-gaming-pc-electricity-cost/">
+<meta property="og:site_name" content="RigCost">
+<meta property="og:image" content="https://rigcost.co.uk/og.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rigcost.co.uk/og.png">
+<meta name="theme-color" content="#0d6b5b">
+<meta name="google-site-verification" content="3PvC1MIsjz__GuhE1ktbg3zEu9GB-7bujPmxtdtwkj4">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RigCost", "item": "https://rigcost.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://rigcost.co.uk/guides/cut-gaming-pc-electricity-cost/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to cut your gaming PC's electricity cost", "inLanguage": "en-GB", "dateModified": "2026-10-18", "author": {"@type": "Organization", "name": "RigCost"}}</script>
+
+<script>window.RIGCOST_LINKS = true;</script>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=Atkinson+Hyperlegible:wght@400;700&family=Share+Tech+Mono&display=swap">
+<style>
+/* Layout: a smart-meter readout pinned beside the rig form; reference tables and method below. */
+:root {
+  --bg: #edf0ee;
+  --surface: #ffffff;
+  --sunk: #e2e7e4;
+  --line: #cdd6d2;
+  --ink: #14211d;
+  --muted: #56655f;
+  --accent: #0d6b5b;
+  --accent-ink: #ffffff;
+  --meter: #1c1913;
+  --meter-line: #3a3326;
+  --amber: #ffb547;
+  --amber-dim: #8a6a35;
+  --gpu: #0d6b5b; --cpu: #c7832a; --rest: #7b8a85; --mon: #4b6fa8;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --readout: "Share Tech Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1412; --surface: #151d1b; --sunk: #1b2523; --line: #2a3734; --ink: #e5eeeb; --muted: #95a8a2;
+    --accent: #4cc2aa; --accent-ink: #06201b; --meter: #120f0a; --meter-line: #3a3326;
+    --gpu: #4cc2aa; --cpu: #e3a24e; --rest: #8d9c97; --mon: #7d9fd6; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1412; --surface: #151d1b; --sunk: #1b2523; --line: #2a3734; --ink: #e5eeeb; --muted: #95a8a2;
+  --accent: #4cc2aa; --accent-ink: #06201b; --meter: #120f0a; --meter-line: #3a3326;
+  --gpu: #4cc2aa; --cpu: #e3a24e; --rest: #8d9c97; --mon: #7d9fd6; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 17px/1.55 var(--body); }
+.page { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 56px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-stretch: 112%; text-wrap: balance; line-height: 1.08; margin: 0; }
+
+/* Header */
+.mast { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 22px 18px; border-bottom: 2px solid var(--ink); }
+.brand { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+.rate-chip { font: 14px var(--readout); color: var(--muted); }
+
+.intro { padding-block: 30px 22px; max-width: 760px; }
+.intro h1 { font-size: clamp(30px, 5vw, 50px); font-weight: 800; letter-spacing: -0.015em; }
+.intro p { color: var(--muted); margin: 12px 0 0; font-size: 18px; max-width: 62ch; }
+
+/* Tool */
+.tool { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
+@media (min-width: 900px) { .tool { grid-template-columns: minmax(0, 1fr) 420px; } .meter { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); } }
+
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: grid; gap: 20px; min-width: 0; }
+.field { display: grid; gap: 6px; min-width: 0; align-content: start; }
+.field > label, .field > .lab { font-weight: 700; font-size: 15px; }
+.hint { font-size: 14px; color: var(--muted); }
+select, input[type="number"] {
+  width: 100%; min-height: 46px; padding: 0 12px; font: 16px var(--body); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+}
+.row2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; background: var(--sunk); padding: 4px; border-radius: 10px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { display: grid; gap: 1px; text-align: center; padding: 9px 6px; border-radius: 7px; cursor: pointer; font-weight: 700; font-size: 15px; }
+.seg label small { font-weight: 400; font-size: 12px; color: var(--muted); }
+.seg input:checked + label { background: var(--surface); box-shadow: inset 0 0 0 2px var(--accent); }
+.seg input:focus-visible + label { outline: 3px solid var(--accent); }
+.range-row { display: flex; align-items: center; gap: 14px; }
+.range-row input[type="range"] { flex: 1; min-width: 0; accent-color: var(--accent); height: 30px; }
+.range-row output { font: 20px var(--readout); min-width: 4.5ch; text-align: right; }
+.custom[hidden] { display: none !important; }
+
+/* Meter readout (always the in-home-display look) */
+.meter { background: var(--meter); color: var(--amber); border-radius: 14px; padding: 20px 20px 18px; border: 1px solid var(--meter-line); min-width: 0; }
+.meter-top { display: flex; justify-content: space-between; font: 13px var(--readout); color: var(--amber-dim); letter-spacing: .08em; text-transform: uppercase; }
+.big { font: clamp(56px, 9vw, 76px)/1 var(--readout); margin: 14px 0 2px; font-variant-numeric: tabular-nums; text-shadow: 0 0 18px rgba(255,181,71,.25); }
+.big-sub { font: 15px var(--readout); color: var(--amber-dim); }
+.readouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--meter-line); border: 1px solid var(--meter-line); border-radius: 8px; overflow: hidden; margin-top: 18px; }
+.readouts div { background: var(--meter); padding: 10px 12px; }
+.readouts dt { font: 11px var(--readout); color: var(--amber-dim); letter-spacing: .1em; text-transform: uppercase; }
+.readouts dd { margin: 4px 0 0; font: 22px var(--readout); font-variant-numeric: tabular-nums; }
+.watts { margin-top: 18px; }
+.watts-head { display: flex; justify-content: space-between; font: 13px var(--readout); color: var(--amber-dim); letter-spacing: .06em; text-transform: uppercase; }
+.watts-head b { color: var(--amber); font-weight: 400; }
+.bar { display: flex; height: 14px; border-radius: 3px; overflow: hidden; margin-top: 8px; background: var(--meter-line); }
+.bar i { display: block; height: 100%; transition: width .3s; }
+.legend { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; font: 13px var(--readout); color: #e9dcc4; }
+.legend li { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.legend li span:last-child { margin-left: auto; color: var(--amber); font-variant-numeric: tabular-nums; }
+.legend i { width: 10px; height: 10px; flex: none; border-radius: 2px; }
+.fact { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--meter-line); font: 15px/1.5 var(--body); color: #e9dcc4; }
+.fact b { color: var(--amber); font-family: var(--readout); font-weight: 400; font-size: 17px; }
+.measure { display: block; margin-top: 14px; padding: 12px 14px; border-radius: 8px; background: rgba(255,181,71,.08); border: 1px solid var(--meter-line); color: #e9dcc4; font-size: 14px; text-decoration: none; }
+.measure strong { color: var(--amber); }
+.aff { font-size: 12px; color: var(--amber-dim); margin-top: 6px; }
+
+/* Sections below */
+section { padding-top: 52px; }
+section > h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 800; }
+section > p.lede { color: var(--muted); margin: 8px 0 18px; max-width: 64ch; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font: 12px var(--readout); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); background: var(--sunk); position: sticky; top: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--readout); }
+tbody tr:last-child td { border-bottom: 0; }
+tr.mine td { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); font-weight: 700; }
+.tbar { display: inline-block; height: 8px; border-radius: 2px; background: var(--gpu); vertical-align: middle; margin-left: 8px; opacity: .8; }
+.method { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.method div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; min-width: 0; }
+.method h3 { font-size: 18px; margin-bottom: 6px; }
+.method p { margin: 0; color: var(--muted); font-size: 15px; }
+.formula { font: 15px/1.7 var(--readout); background: var(--sunk); border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 0 0 14px; }
+details { border-bottom: 1px solid var(--line); padding-block: 4px; }
+summary { cursor: pointer; font-weight: 700; padding-block: 12px; }
+details p { margin: 0 0 14px; color: var(--muted); max-width: 70ch; }
+.sources { font-size: 14px; color: var(--muted); padding-left: 18px; }
+.sources li { margin: 4px 0; }
+footer { margin-top: 48px; padding-top: 18px; border-top: 2px solid var(--ink); font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+@media (max-width: 480px) { .readouts dd { font-size: 18px; } .legend { grid-template-columns: 1fr; } }
+</style>
+<style>
+.browse-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 14px; }
+.browse h3 { font-size: 16px; margin: 0 0 6px; }
+.browse ul { list-style: none; padding: 0; margin: 0 0 16px; columns: 2; column-gap: 16px; font-size: 15px; }
+.browse li { margin: 3px 0; break-inside: avoid; }
+.crumb { font: 13px var(--readout); color: var(--muted); padding-top: 18px; }
+.crumb a { color: var(--muted); }
+.prose { max-width: 70ch; }
+.prose h2 { font-size: clamp(22px, 3vw, 28px); margin: 34px 0 8px; }
+.prose p, .prose li { color: var(--ink); }
+.prose li { margin: 6px 0; }
+.stat { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.stat div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.stat dt { font: 12px var(--readout); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stat dd { margin: 4px 0 0; font: 26px var(--readout); font-variant-numeric: tabular-nums; }
+.btn-link { display: inline-block; margin-top: 10px; padding: 12px 18px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+</style>
+<div class="page">
+  <header class="mast">
+    <a class="brand" href="/">Rig<span>Cost</span></a>
+    <span class="rate-chip">UK price cap · 26.32p/kWh</span>
+  </header>
+  <main>
+
+    <div class="intro">
+      <p class="crumb"><a href="/">RigCost</a> / Guides</p>
+      <h1>How to cut your gaming PC's electricity cost</h1>
+      <p>Most of a gaming PC's power goes on the graphics card, so the biggest savings come from making it work less hard. These seven changes cost nothing and keep games looking good.</p>
+    </div>
+    <section class="prose" aria-label="Tips">
+      <h2>1. Cap your frame rate</h2><p>If your graphics card is producing more frames than your monitor can show, it is using power for nothing. Set a frame cap at or just below your monitor&#x27;s refresh rate, in the game or in your graphics driver. Going from a typical load to a light one on an RTX 4070 PC saves about £20 a year at 3 hours a day.</p><h2>2. Use upscaling</h2><p>DLSS, FSR and XeSS render at a lower resolution and upscale the image, so the graphics card does less work for each frame. With a frame cap on, that usually means lower power use for a similar picture.</p><h2>3. Use V-Sync or adaptive sync</h2><p>V-Sync, G-Sync and FreeSync stop the card running far beyond your refresh rate in lighter games, which has the same effect as a frame cap.</p><h2>4. Turn off screens you aren&#x27;t using</h2><p>A second 27-inch monitor left on while you play adds about 35 W, around £10 a year at 3 hours a day.</p><h2>5. Use sleep, not idle</h2><p>Leaving the PC on overnight on the desktop still draws power all night. Set Windows to sleep after 15–30 minutes and turn off the PC at the wall if you are away for long.</p><h2>6. Pick efficient parts when you upgrade</h2><p>When two cards perform similarly, the one with the lower rated power costs less every hour you play. Compare running costs on any card&#x27;s page before you buy.</p><h2>7. Check your tariff</h2><p>The calculator uses the price cap of 26.32p per kWh. A cheaper fixed tariff, or cheaper off-peak hours if you have a smart tariff, lowers the cost of every hour you play.</p>
+      <p><a class="btn-link" href="/">See what your PC costs now</a></p>
+    </section>
+<section aria-labelledby="browse" class="browse">
+      <h2 id="browse">Running costs by part</h2>
+      <div class="browse-grid">
+        <div><h3>Graphics cards</h3><ul><li><a href="/gpu/rtx-4060/">RTX 4060</a></li><li><a href="/gpu/gtx-1660-super/">GTX 1660 Super</a></li><li><a href="/gpu/rx-6600/">RX 6600</a></li><li><a href="/gpu/rtx-5060/">RTX 5060</a></li><li><a href="/gpu/rtx-4060-ti/">RTX 4060 Ti</a></li><li><a href="/gpu/rx-7600/">RX 7600</a></li><li><a href="/gpu/rtx-3060/">RTX 3060</a></li><li><a href="/gpu/rtx-5060-ti/">RTX 5060 Ti</a></li><li><a href="/gpu/rx-9060-xt-16gb/">RX 9060 XT 16GB</a></li><li><a href="/gpu/arc-b580/">Arc B580</a></li><li><a href="/gpu/rtx-4070/">RTX 4070</a></li><li><a href="/gpu/rtx-3060-ti/">RTX 3060 Ti</a></li><li><a href="/gpu/rtx-4070-super/">RTX 4070 Super</a></li><li><a href="/gpu/rtx-3070/">RTX 3070</a></li><li><a href="/gpu/rx-9070/">RX 9070</a></li><li><a href="/gpu/rx-6700-xt/">RX 6700 XT</a></li><li><a href="/gpu/rx-7700-xt/">RX 7700 XT</a></li><li><a href="/gpu/rtx-5070/">RTX 5070</a></li><li><a href="/gpu/rx-7800-xt/">RX 7800 XT</a></li><li><a href="/gpu/rtx-4070-ti/">RTX 4070 Ti</a></li><li><a href="/gpu/rtx-5070-ti/">RTX 5070 Ti</a></li><li><a href="/gpu/rx-9070-xt/">RX 9070 XT</a></li><li><a href="/gpu/rx-7900-xt/">RX 7900 XT</a></li><li><a href="/gpu/rtx-4080/">RTX 4080</a></li><li><a href="/gpu/rtx-3080/">RTX 3080</a></li><li><a href="/gpu/rtx-3090/">RTX 3090</a></li><li><a href="/gpu/rx-7900-xtx/">RX 7900 XTX</a></li><li><a href="/gpu/rtx-5080/">RTX 5080</a></li><li><a href="/gpu/rtx-4090/">RTX 4090</a></li><li><a href="/gpu/rtx-5090/">RTX 5090</a></li></ul></div>
+        <div><h3>Processors</h3><ul><li><a href="/cpu/ryzen-5-5600/">Ryzen 5 5600</a></li><li><a href="/cpu/ryzen-7-5800x3d/">Ryzen 7 5800X3D</a></li><li><a href="/cpu/ryzen-5-7600/">Ryzen 5 7600</a></li><li><a href="/cpu/ryzen-7-7800x3d/">Ryzen 7 7800X3D</a></li><li><a href="/cpu/ryzen-5-9600x/">Ryzen 5 9600X</a></li><li><a href="/cpu/ryzen-7-9800x3d/">Ryzen 7 9800X3D</a></li><li><a href="/cpu/ryzen-9-9950x3d/">Ryzen 9 9950X3D</a></li><li><a href="/cpu/core-i5-12400f/">Core i5-12400F</a></li><li><a href="/cpu/core-i5-13400f/">Core i5-13400F</a></li><li><a href="/cpu/core-i5-14600k/">Core i5-14600K</a></li><li><a href="/cpu/core-i7-14700k/">Core i7-14700K</a></li><li><a href="/cpu/core-i9-14900k/">Core i9-14900K</a></li><li><a href="/cpu/core-ultra-5-245k/">Core Ultra 5 245K</a></li><li><a href="/cpu/core-ultra-7-265k/">Core Ultra 7 265K</a></li><li><a href="/cpu/core-ultra-9-285k/">Core Ultra 9 285K</a></li></ul></div>
+        <div><h3>Consoles</h3><ul><li><a href="/console/ps5/">PS5</a></li><li><a href="/console/ps5-pro/">PS5 Pro</a></li><li><a href="/console/xbox-series-x/">Xbox Series X</a></li><li><a href="/console/xbox-series-s/">Xbox Series S</a></li><li><a href="/console/nintendo-switch-2/">Nintendo Switch 2</a></li><li><a href="/consoles/">PC vs console compared</a></li></ul>
+        <h3>Guides</h3><ul><li><a href="/guides/cut-gaming-pc-electricity-cost/">Cut your gaming PC's electricity cost</a></li></ul></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span id="footNote">Prices last updated for October–December 2026. Estimates only.</span>
+    <p style="margin: 8px 0 0;">As an Amazon Associate, RigCost earns from qualifying purchases. Price links on this site are affiliate links; they never change our numbers or what we show.</p>
+  </footer>
+</div>
+</body>
+</html>
