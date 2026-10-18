@@ -20,6 +20,7 @@ A free calculator that shows UK gamers what their gaming PC costs to run. Pick a
 - **No framework.** One self-contained HTML file (`rigcost.html`) holds the calculator's markup, styles and JavaScript.
 - **Static site generator.** `build.py` (Python, standard library only) turns it into 53 pages: it pre-selects the right part on each page, writes crawlable cost tables, internal links, structured data (JSON-LD), a sitemap and robots.txt.
 - **Hosting:** Cloudflare Workers static assets, on a custom domain. `wrangler.jsonc` points Cloudflare at the built `site/` folder.
+- **Continuous deployment:** every push to `main` deploys automatically through Cloudflare Workers Builds.
 - **Accessible and responsive:** labelled form controls, keyboard focus states, light and dark themes, reduced-motion support, and layouts tested down to phone width.
 - **SEO:** canonical URLs, Open Graph share image, breadcrumb and FAQ structured data, verified in Google Search Console.
 
